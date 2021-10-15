@@ -22,13 +22,33 @@ class Director:
 
     def first_line(self):
         hidden_word = self.computer.hidden_word()
+        self.console.print_message(hidden_word)
     
-    def star_game(self):
-
+    def start_game(self):
+        self.first_line()
         while self.keep_playing:
             self.get_input()
             self.do_updates()
             self.do_outputs()
     
     def get_input(self):
-        hidden_word = self.computer.hidden_word()
+        self.interface.drawing()
+        print("^"*7)
+        self.computer.letter = self.console.return_input(self.computer.get_message())
+
+    def do_updates(self):
+        print(self.computer.comparisson(self.computer.letter))
+        if self.computer.check_letter():
+            self.interface.delete_line()
+
+    
+    def do_outputs(self):
+        if self.interface.can_play():
+            self.keep_playing = False
+            self.interface.drawing()
+        
+        elif self.computer.comparisson(self.computer.letter) == self.computer.word:
+            print('You win!')
+
+
+

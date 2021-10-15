@@ -18,6 +18,7 @@ class Computer:
         self.words = ["dog", "cat", "hamburger", "dinosaur", "tiger"]
         self.letter = ""
         self.word = random.choice(self.words)
+        self.new_hidden_word= ""
         
     
     def hidden_word(self):
@@ -39,14 +40,24 @@ class Computer:
         received_letter(The guessed letter)
         """
         word = self.word
-        new_hidden_word = ""
         for i in word:
             if received_letter == i:
-                new_hidden_word += i
+                self.new_hidden_word += i
+            elif received_letter != "_":
+                pass 
             else:
-                new_hidden_word += "_"   
-        return new_hidden_word
+                self.new_hidden_word += "_"
+        self.word = self.new_hidden_word           
+        return self.new_hidden_word
 
+    def check_letter(self):
+        count = 0
+        for c in self.word:
+            if self.letter == c:
+                count += 1
+        
+        if count == 0:
+            return True
     
 
     

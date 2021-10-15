@@ -26,5 +26,10 @@ class Interface:
         Argument: self(Computer)"""
 
         self.parachute.pop(0)
+    
+    def can_play(self):
+        if len(self.parachute) <= 3:
+            self.parachute[0] = "   x"
+            return True
 
     
