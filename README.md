@@ -34,4 +34,18 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* Hyrum Hilamatu - hyrum.hilamatu@gmail.com
+* Martin Sander msander1987@gmail.com
+* Stephanie Sarah Noel - stephaniemelissal709@gmail.com
+* Charlet Mbizi charletmbizim@gmail.com
+* Blake Hollingsworth - hol20048@byui.edu
+
+## Jumper planning
+
+* Director
+
+* Console 
+
+* Guesser
+
+* Computer 
